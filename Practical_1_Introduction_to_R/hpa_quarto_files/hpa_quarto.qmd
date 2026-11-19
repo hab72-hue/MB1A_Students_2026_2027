@@ -1,0 +1,26 @@
+---
+title: "MB1A Practical 1 - HPA"
+author: "Harmony"
+---
+
+In this document I will compare the total number of genes with regionally elevated expression in the forebrain (cerebral cortex, basal ganglia, thalamus and hypothalamus) in humans, pigs and mice.
+
+Humans:
+```{r}
+total_elevated_genes_human <- sum(180, 83, 57, 110)
+print(total_elevated_genes_human)
+```
+
+Pigs:
+```{r}
+total_elevated_genes_pig <- sum(109, 157, 31, 45)
+print(total_elevated_genes_pig)
+```
+
+Mice:
+```{r}
+total_elevated_genes_mouse <- sum(55, 185, 60, 98)
+print(total_elevated_genes_mouse)
+```
+
+The species with the highest total number of genes with regionally elevated expression in the forebrain was 430 in Humans.

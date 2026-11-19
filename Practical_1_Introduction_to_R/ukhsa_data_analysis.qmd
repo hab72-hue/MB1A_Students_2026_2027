@@ -1,0 +1,25 @@
+---
+title: "ukhsa_data_analysis"
+author: "Harmony Bath"
+---
+
+Packages:
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+UKHSA data:
+```{r}
+lead_exposure <- read_csv("data/ukhsa-chart-download-lead_exposure.csv")
+gt(head(lead_exposure, 10))
+```
+
+This table displays the first 10 lines (so from 2024 to 2019) of the UKHSA data for the number of lead cases identified each year among children in England from 2016 to 2025.
+
+There is an issue in the Moodle explanation here as it suggests the head() function within the gt() function without a number specified defaults to the visualization of 10 lines, however, the default is actually 6.
+
+```{r}
+ggplot(lead_exposure, aes(x = year, y = metric_value)) + geom_line(colour = "springgreen3") + xlab("Year") + ylab("Number of cases") + ggtitle("Cases of Lead Exposure by Year")
+```
+

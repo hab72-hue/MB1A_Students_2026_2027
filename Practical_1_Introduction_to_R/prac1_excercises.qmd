@@ -1,0 +1,79 @@
+---
+title: "Practical 1 Exercises"
+author: "Harmony Bath"
+---
+
+Installing packages:
+
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+Functions:
+
+```{r}
+print(round(3.141592653589793238464623))
+print(round(3.141592653589793238464623,digits=2))
+```
+
+Arguments:
+
+```{r}
+print(rep(5,7))
+print(rep(times=7, x=5))
+
+```
+
+Variables:
+
+```{r}
+c <- "sponge"
+n <- 6.02214076e23
+l <- FALSE
+
+print(paste("variable c =", c))
+print(paste("variable class =", class(c)))
+print(paste("variable n =", n))
+print(paste("variable class =", class(n)))
+print(paste("variable l =", l))
+print(paste("variable class =", class(l)))
+```
+
+```{r}
+Cell_ID_1 <- "CX1"
+Cell_ID_2 <- "CX2"
+Treated_1 <- TRUE
+Treated_2 <- FALSE
+Cells_before_1 <- 5415
+Cells_before_2 <- 8123
+Cells_after_1 <- 1432
+Cells_after_2 <- 7543
+
+```
+
+Vectors:
+
+```{r}
+Cell_ID <- c(Cell_ID_1, Cell_ID_2)
+Treated <- c(Treated_1, Treated_2)
+Cells_before <- c(Cells_before_1, Cells_before_2)
+Cells_after <- c(Cells_after_1, Cells_after_2)
+
+```
+
+Indexing:
+
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+pet_4 <- all_my_pets[4]
+print(pet_4)
+
+```
+
+Creating a data frame:
+
+```{r}
+radiateion_data_frame <- tibble(Cell_ID = Cell_ID, Treated = Treated, N_Cells_Before = Cells_before, N_Cells_After = Cells_after)
+gt(radiateion_data_frame)
+```
